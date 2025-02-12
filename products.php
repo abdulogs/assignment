@@ -34,8 +34,8 @@ if (request()->get("id")) {
         <article class="card card-shadowless card-borderless">
             <div class="card-head">
                 <h3 class="card-title">Products</h3>
-                <a href="product-create.php" class="btn btn-primary btn-icon">
-                    <b class="bx bx-plus-circle icon"></b> Create
+                <a href="product-create.php" class="btn btn-dark">
+                    Create
                 </a>
             </div>
             <div class="card-body">
