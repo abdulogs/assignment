@@ -1,0 +1,21 @@
+.boxed {
+    --box-width: 93%;
+    width: var(--box-width);
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: screen-size(sm)) {
+        --box-width: 97%;
+    }
+    @media (min-width: screen-size(md)) {
+        --box-width: 94%;
+    }
+    @media (min-width: screen-size(lg)) {
+        --box-width: 90%;
+    }
+    @media (min-width: screen-size(xl)) {
+        --box-width: 85%;
+    }
+    @media (min-width: screen-size(xxl)) {
+        --box-width: 80%;
+    }
+}

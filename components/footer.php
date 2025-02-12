@@ -1,0 +1,1 @@
+<footer class="footer"> &#169; Assignment <?php echo date("Y"); ?> </footer>

@@ -1,0 +1,22 @@
+.hide-sm {
+    @media (max-width: screen-size(sm)) {
+        display: none !important;
+    }
+}
+.hide-md {
+    @media (max-width: screen-size(md)) {
+        display: none !important;
+    }
+}
+.show-sm {
+    display: none !important;
+    @media (max-width: screen-size(sm)) {
+        display: inline-block !important;
+    }
+}
+.show-md {
+    display: none !important;
+    @media (max-width: screen-size(md)) {
+        display: inline-block !important;
+    }
+}

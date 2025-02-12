@@ -1,0 +1,45 @@
+.link {
+    --link-fg: var(--muted);
+    --link-fg-h: var(--muted-hover);
+    --link-fw: 600;
+    text-decoration: none;
+    font-weight: var(--link-fw);
+    color: var(--link-fg) !important;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+        color: var(--link-fg-h);
+        text-decoration: underline;
+    }
+}
+.link-primary {
+    --link-fg: var(--primary);
+    --link-fg-h: var(--primary-hover);
+}
+.link-secondary {
+    --link-fg: var(--secondary);
+    --link-fg-h: var(--secondary-hover);
+}
+.link-danger {
+    --link-fg: var(--danger);
+    --link-fg-h: var(--danger-hover);
+}
+.link-warning {
+    --link-fg: var(--warning);
+    --link-fg-h: var(--warning-hover);
+}
+.link-info {
+    --link-fg: var(--info);
+    --link-fg-h: var(--info-hover);
+}
+.link-success {
+    --link-fg: var(--success);
+    --link-fg-h: var(--success-hover);
+}
+.link-dark {
+    --link-fg: var(--dark);
+    --link-fg-h: var(--dark-hover);
+}

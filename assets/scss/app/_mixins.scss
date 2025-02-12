@@ -1,0 +1,77 @@
+@mixin utils($data) {
+  @each $size, $classes in $data {
+    @if $size==default {
+      @each $class, $properties in $classes {
+        #{$class} {
+          @each $property, $value in $properties {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+
+    $breakpointSize: if(
+      map-has-key($classes, size),
+      map-get($classes, size),
+      screen-size($size)
+    );
+
+    $breakpointScale: if(
+      map-has-key($classes, scale),
+      map-get($classes, scale),
+      max-width
+    );
+
+    $breakpointPrefix: if(map-has-key($classes, prefix), null, "-#{$size}");
+
+    @media ($breakpointScale: $breakpointSize) {
+      @if $size !=default {
+        @each $class, $properties in $classes {
+          @if $class !=prefix or $class !=scale $class !=size {
+            #{$class}#{$breakpointPrefix} {
+              @each $property, $value in $properties {
+                #{$property}: $value;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin config-common {
+  $common: map-get(
+    $map: $config,
+    $key: common,
+  );
+
+  @each $key, $value in $common {
+    --#{$key}: #{$value};
+  }
+}
+
+@mixin config-colors($mode: light) {
+  $colors: map-get($config, colors);
+  $colors: map-get($colors, $mode);
+
+  @if ($colors) {
+    @each $key, $values in $colors {
+      $color: map-get($values, color);
+      $types: map-get($values, types);
+      --#{$key}: #{$color};
+
+      @each $type, $value in $types {
+        @if ($type ==lighten) {
+          --#{$key}-#{$type}: #{lighten($color, $value)};
+        } @else if ($type ==darken) {
+          --#{$key}-#{$type}: #{darken($color, $value)};
+        } @else if ($type ==subtle) {
+          --#{$key}-#{$type}: #{lighten($color, $value)};
+        } @else if ($type ==rgb and $value ==true) {
+          --#{$key}-#{$type}: #{red($color), green($color), blue($color)};
+        }
+      }
+    }
+  }
+}

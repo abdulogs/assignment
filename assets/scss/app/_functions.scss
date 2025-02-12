@@ -1,0 +1,48 @@
+@function screen-size($size) {
+    $breakpoints: map-get($map: $config,
+            $key: breakpoints,
+        );
+    @return map-get($breakpoints, $size);
+}
+
+@function image($path) {
+    $assets: map-get($map: $config,
+            $key: assets,
+        );
+    @return map-get($assets, "image")+$path;
+}
+
+@function font($path) {
+    $assets: map-get($map: $config,
+            $key: assets,
+        );
+    @return map-get($assets, "fonts")+$path;
+}
+
+@function get-config($name) {
+    @return map-get($map: $config, $key: $name);
+}
+
+@function get-color($color, $mode: light) {
+    $colors: map-get($map: $config,
+            $key: colors,
+        );
+    $_colors: if($mode ==light,
+            map-get($colors, light),
+            map-get($colors, dark));
+    $_color: map-get($_colors, $color);
+
+    @return $_color;
+}
+
+@function get-rgb($color, $mode: light) {
+    $_color: get-color($color, $mode: light);
+    @return red($_color), green($_color), blue($_color);
+}
+
+@function get-prop($prop) {
+    $props: map-get($map: $config,
+            $key: common,
+        );
+    @return map-get($props, $prop);
+}

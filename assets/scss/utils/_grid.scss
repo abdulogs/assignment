@@ -1,0 +1,31 @@
+.grid {
+    --grid-c: auto;
+    --grid-r: auto;
+    --grid-gx: 15px;
+    --grid-gy: 15px;
+    --grid-mt: 15px;
+    --grid-mb: 15px;
+    display: grid;
+    row-gap: var(--grid-gy);
+    column-gap: var(--grid-gx);
+    margin-top: var(--grid-mt);
+    margin-bottom: var(--grid-mb);
+    grid-template-columns: var(--grid-c);
+    grid-template-rows: var(--grid-r);
+}
+
+.grid-blogs {
+    --grid-c: repeat(5, 1fr);
+
+    @media (max-width: screen-size(lg)) {
+        --grid-c: repeat(3, 1fr);
+    }
+
+    @media (max-width: screen-size(md)) {
+        --grid-c: repeat(2, 1fr);
+    }
+
+    @media (max-width: screen-size(sm)) {
+        grid-template-columns: 100%;
+    }
+}

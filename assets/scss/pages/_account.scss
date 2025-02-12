@@ -1,0 +1,23 @@
+.account-page {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .boxed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+      --card-m: auto;
+      --card-b: none;
+      --card-bs: none;
+      --card-title-fs: 2rem;
+      --card-title-lh: 1.4;
+
+      .card-foot {
+        padding-top: 0;
+      }
+    }
+  }
+}

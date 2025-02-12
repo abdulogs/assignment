@@ -1,0 +1,8 @@
+:root {
+    @include config-common;
+    @include config-colors(light);
+}
+
+.dark-mode {
+    @include config-colors(dark);
+}

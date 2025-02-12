@@ -1,0 +1,68 @@
+.field-rating {
+    --rating-fg: var(--muted);
+    --rating-fg-a: var(--secondary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: baseline;
+    direction: rtl;
+
+    input {
+        display: none;
+    }
+
+    label {
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: var(--rating-fg);
+        margin-right: -2px;
+
+        &:before {
+            content: "\2605";
+        }
+    }
+
+    input:checked~label:before {
+        color: var(--rating-fg-a);
+    }
+
+    input:hover~label:before {
+        color: var(--rating-fg-a);
+    }
+}
+
+.ratings {
+    display: flex;
+    justify-content: flex-end;
+    direction: rtl;
+    align-items: baseline;
+    gap: 2px;
+
+    .bx {
+        font-size: 1.2rem;
+        color: var(--muted);
+        transition: color 0.3s ease;
+
+        &.active {
+            color: var(--secondary);
+        }
+    }
+
+    .bx.active~.bx {
+        color: var(--secondary);
+    }
+}
+
+.rating {
+    .bx {
+        color: var(--secondary);
+    }
+}
+
+.static-rating {
+    font-size: 1.4rem;
+    color: var(--border);
+
+    .active {
+        color: var(--secondary);
+    }
+}

@@ -1,0 +1,139 @@
+$config: (
+  fonts-url:
+    "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap",
+  common: (
+    font-size: 0.9rem,
+    font-family: "Inter , Arial",
+    line-height: 1.5,
+    shadow-sm: "rgba(9, 30, 66, 0.25) 0px 4px 8px -2px",
+    shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px,
+    shadow-lg: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px,
+    rounded-sm: 2px,
+    rounded: 4px,
+    rounded-lg: 8px,
+  ),
+  assets: (
+    image: "../images/",
+    fonts: "../fonts/",
+  ),
+  breakpoints: (
+    xs: 340px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1280px,
+    xxl: 1400px,
+  ),
+  colors: (
+    light: (
+      primary: (
+        color: #0f43c8,
+        types: (
+          lighten: 10%,
+          darken: 3%,
+          subtle: 55%,
+          rgb: true,
+        ),
+      ),
+      secondary: (
+        color: #cda018,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 30%,
+          rgb: true,
+        ),
+      ),
+      success: (
+        color: #015e18,
+        types: (
+          lighten: 5%,
+          darken: 5%,
+          subtle: 70%,
+          rgb: true,
+        ),
+      ),
+      danger: (
+        color: #ff0000,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 45%,
+          rgb: true,
+        ),
+      ),
+      info: (
+        color: #1e6cd9,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 42%,
+          rgb: true,
+        ),
+      ),
+      warning: (
+        color: #f75c03,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 52%,
+          rgb: true,
+        ),
+      ),
+      dark: (
+        color: #0e0f0e,
+        types: (
+          lighten: 5%,
+          darken: 5%,
+          subtle: 30%,
+          rgb: true,
+        ),
+      ),
+      light: (
+        color: #e3e5e3,
+        types: (
+          lighten: 10%,
+          darken: 5%,
+          subtle: 30%,
+          rgb: true,
+        ),
+      ),
+      body: (
+        color: #fff,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 30%,
+          rgb: true,
+        ),
+      ),
+      text: (
+        color: #1a0410,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 30%,
+          rgb: true,
+        ),
+      ),
+      muted: (
+        color: #2a282a,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 30%,
+          rgb: true,
+        ),
+      ),
+      border: (
+        color: #d1d1d1,
+        types: (
+          lighten: 10%,
+          darken: 10%,
+          subtle: 30%,
+          rgb: true,
+        ),
+      ),
+    ),
+  ),
+);

@@ -1,0 +1,188 @@
+.table {
+    --table-fg: var(--text);
+    --table-bg: transparent;
+    --table-bc: var(--border-color);
+    --table-bg-ac: transparent;
+    --table-fg-s: var(--text);
+    --table-bg-s: var(--body);
+    --table-fg-a: var(--text);
+    --table-bg-a: var(--body);
+    --table-fg-h: var(--text);
+    --table-bg-h: var(--light);
+    width: 100%;
+    color: var(--table-fg);
+    vertical-align: top;
+    border-color: var(--table-bc);
+    border-radius: var(--rounded);
+    font-size: var(--font-size);
+    th {
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    & > :not(caption) > * > * {
+        padding: 0.5rem 0.5rem;
+        background-color: var(--table-bg);
+        border-bottom-width: var(--border-width);
+        box-shadow: inset 0 0 0 9999px var(--table-bg-ac);
+    }
+
+    & > tbody {
+        vertical-align: inherit;
+    }
+
+    & > thead {
+        vertical-align: bottom;
+    }
+}
+
+.caption-top {
+    caption-side: top;
+}
+
+.table-sm > :not(caption) > * > * {
+    padding: 0.25rem 0.25rem;
+}
+
+.table-bordered > :not(caption) > * {
+    border-width: var(--border-width) 0;
+}
+
+.table-bordered > :not(caption) > * > * {
+    border-width: 0 var(--border-width);
+}
+
+.table-borderless > :not(caption) > * > * {
+    border-bottom-width: 0;
+}
+
+.table-borderless > :not(:first-child) {
+    border-top-width: 0;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --table-bg-ac: var(--table-bg-s);
+    color: var(--table-fg-s);
+}
+
+.table-striped-columns > :not(caption) > tr > :nth-child(even) {
+    --table-bg-ac: var(--table-bg-s);
+    color: var(--table-fg-s);
+}
+
+.table-active {
+    --table-bg-ac: var(--table-bg-a);
+    color: var(--table-fg-a);
+}
+
+.table-hoverable > tbody > tr:hover > * {
+    --table-bg-ac: var(--table-bg-h);
+    color: var(--table-fg-h);
+}
+
+.table-primary {
+    --table-bc: rgba(var(--primary-rgb), 0.9);
+    --table-fg: var(--primary);
+    --table-bg: rgba(var(--primary-rgb), 0.05);
+    --table-bg-s: rgba(var(--primary-rgb), 0.05);
+    --table-fg-s: var(--primary);
+    --table-bg-a: rgba(var(--primary-rgb), 0.1);
+    --table-fg-a: var(--primary);
+    --table-bg-h: rgba(var(--primary-rgb), 0.15);
+    --table-fg-h: var(--primary);
+}
+
+.table-secondary {
+    --table-bc: rgba(var(--secondary-rgb), 0.9);
+    --table-fg: var(--secondary);
+    --table-bg: rgba(var(--secondary-rgb), 0.05);
+    --table-bg-s: rgba(var(--secondary-rgb), 0.05);
+    --table-fg-s: var(--secondary);
+    --table-bg-a: rgba(var(--secondary-rgb), 0.1);
+    --table-fg-a: var(--secondary);
+    --table-bg-h: rgba(var(--secondary-rgb), 0.15);
+    --table-fg-h: var(--secondary);
+}
+.table-info {
+    --table-bc: rgba(var(--info-rgb), 0.9);
+    --table-fg: var(--info);
+    --table-bg: rgba(var(--info-rgb), 0.05);
+    --table-bg-s: rgba(var(--info-rgb), 0.05);
+    --table-fg-s: var(--info);
+    --table-bg-a: rgba(var(--info-rgb), 0.1);
+    --table-fg-a: var(--info);
+    --table-bg-h: rgba(var(--info-rgb), 0.15);
+    --table-fg-h: var(--info);
+}
+.table-info {
+    --table-bc: rgba(var(--info-rgb), 0.9);
+    --table-fg: var(--info);
+    --table-bg: rgba(var(--info-rgb), 0.05);
+    --table-bg-s: rgba(var(--info-rgb), 0.05);
+    --table-fg-s: var(--info);
+    --table-bg-a: rgba(var(--info-rgb), 0.1);
+    --table-fg-a: var(--info);
+    --table-bg-h: rgba(var(--info-rgb), 0.15);
+    --table-fg-h: var(--info);
+}
+
+.table-warning {
+    --table-bc: rgba(var(--warning-rgb), 0.9);
+    --table-fg: var(--warning);
+    --table-bg: rgba(var(--warning-rgb), 0.05);
+    --table-bg-s: rgba(var(--warning-rgb), 0.05);
+    --table-fg-s: var(--warning);
+    --table-bg-a: rgba(var(--warning-rgb), 0.1);
+    --table-fg-a: var(--warning);
+    --table-bg-h: rgba(var(--warning-rgb), 0.15);
+    --table-fg-h: var(--warning);
+}
+.table-danger {
+    --table-bc: rgba(var(--danger-rgb), 0.9);
+    --table-fg: var(--danger);
+    --table-bg: rgba(var(--danger-rgb), 0.05);
+    --table-bg-s: rgba(var(--danger-rgb), 0.05);
+    --table-fg-s: var(--danger);
+    --table-bg-a: rgba(var(--danger-rgb), 0.1);
+    --table-fg-a: var(--danger);
+    --table-bg-h: rgba(var(--danger-rgb), 0.15);
+    --table-fg-h: var(--danger);
+}
+.table-success {
+    --table-bc: rgba(var(--success-rgb), 0.9);
+    --table-fg: var(--success);
+    --table-bg: rgba(var(--success-rgb), 0.05);
+    --table-bg-s: rgba(var(--success-rgb), 0.05);
+    --table-fg-s: var(--success);
+    --table-bg-a: rgba(var(--success-rgb), 0.1);
+    --table-fg-a: var(--success);
+    --table-bg-h: rgba(var(--success-rgb), 0.15);
+    --table-fg-h: var(--success);
+}
+.table-light {
+    --table-bc: rgba(var(--light-rgb), 1);
+    --table-fg: var(--text);
+    --table-bg: rgba(var(--light-rgb), 1);
+    --table-bg-s: rgba(var(--light-rgb), 0.8);
+    --table-fg-s: var(--text);
+    --table-bg-a: rgba(var(--light-rgb), 0.9);
+    --table-fg-a: var(--text);
+    --table-bg-h: rgba(var(--light-rgb), 0.1);
+    --table-fg-h: var(--text);
+}
+.table-dark {
+    --table-bc: rgba(var(--dark-rgb), 0.9);
+    --table-fg: var(--dark);
+    --table-bg: rgba(var(--dark-rgb), 0.5);
+    --table-bg-s: rgba(var(--dark-rgb), 0.5);
+    --table-fg-s: var(--dark);
+    --table-bg-a: rgba(var(--dark-rgb), 0.9);
+    --table-fg-a: var(--dark);
+    --table-bg-h: rgba(var(--dark-rgb), 0.5);
+    --table-fg-h: var(--dark);
+}
+
+.table-responsive {
+    overflow: auto;
+}
